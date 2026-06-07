@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  Home | Generator | Features | Contact
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Marketing Generator</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚀 AI Marketing Generator</div>
+    <button onclick="toggleMode()">🌙 Mode</button>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+      <button class="hero-btn">Try AI Generator</button>
+        <h1>Create Marketing Content in Seconds</h1>
+        <p>Generate Social Media Captions, Ads & Hashtags with AI Style.</p>
+    </div>
+</section>
+<div class="stats">
+   <div class="box">
+      📊 Total Posts
+0
+   </div>
+</div>
+<section class="generator">
+
+    <h2>Generate Your Content</h2>
+
+    <input type="text" id="businessName" placeholder="Business Name">
+
+    <select id="businessType">
+        <option>Restaurant</option>
+        <option>Fashion Store</option>
+        <option>Tech Startup</option>
+        <option>Education</option>
+        <option>Fitness</option>
+        <option>Beauty</option>
+    </select>
+
+    <textarea id="description" placeholder="Describe your business"></textarea>
+<label>Select Platform</label>
+
+<select id="platform">
+    <option value="instagram">Instagram</option>
+    <option value="facebook">Facebook</option>
+    <option value="youtube">YouTube</option>
+    <option value="linkedin">LinkedIn</option>
+</select>
+    <button onclick="generateContent()">Generate</button>
+
+</section>
+
+<section class="output-section">
+
+<div class="card">
+    <h3>Social Media Caption</h3>
+    <p id="caption">Generated content appears here...</p>
+</div>
+
+<div class="card">
+    <h3>Marketing Ad Copy</h3>
+    <p id="adcopy">Generated ad appears here...</p>
+</div>
+
+<div class="card">
+    <h3>Trending Hashtags</h3>
+    <p id="hashtags">#marketing #business</p>
+</div>
+
+</section>
+
+<footer>
+    <p>AI Marketing Generator Pro
+Powered by AI Technology
+
+© 2026 All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<button onclick="copyCaption()">Copy Caption</button>
+<div class="insta-card">
+   <h3>@YourBusiness</h3>
+   <p id="previewText">Generated caption will appear here</p>
+</div>
+<div class="preview-card">
+   <h3>Instagram Preview</h3>
+   <p id="previewText"></p>
+   ❤️ 245 Likes
+
+💬 34 Comments
+
+🔄 12 Shares
+</div>
+<div id="loading">Generating AI Content...</div>
+<div class="hero-stats">
+<div>🚀 1000+ Posts</div>
+<div>🏢 500+ Businesses</div>
+<div>🤖 AI Powered</div>
+</div>
+🤖 AI Generating Content...
