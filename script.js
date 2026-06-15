@@ -1,44 +1,108 @@
+document
+.getElementById("description")
+.addEventListener("input",function(){
+
+document.getElementById("count")
+.innerText =
+this.value.length + " Characters";
+
+});
 function generateContent(){
+
 let business =
-document.getElementById("businessName").value;
+document.getElementById(
+"businessName"
+).value;
 
 let type =
-document.getElementById("businessType").value;
+document.getElementById(
+"businessType"
+).value;
 
 let desc =
-document.getElementById("description").value;
+document.getElementById(
+"description"
+).value;
+let platform =
+document.getElementById(
+"platform"
+).value;
+if(
+business === "" ||
+desc === ""
+){
+alert("Fill all fields");
+return;
+}
+let content = `
+📱 Platform : ${platform}
+📢 Marketing Caption
 
-let caption =
-`✨ Welcome to ${business}! We bring the best ${type} experience for our customers. ${desc} Visit us today and discover something amazing!`;
+✨ Welcome to ${business}!
 
-let ad =
-`🔥 Looking for top-quality ${type} services? ${business} is here for you. Trusted by customers and focused on excellence. Contact us today!`;
+We provide top-quality ${type} services.
 
-let hashtags =
-`#${business.replace(/\s/g,'')}
+${desc}
+
+🔥 Ad Copy
+
+Looking for the best ${type}?
+
+Choose ${business} today and experience excellence.
+
 #Marketing
 #BusinessGrowth
 #DigitalMarketing
-#Startup
-#Success`;
+#${business.replace(/\s/g,'')}
+`;
 
-document.getElementById("caption").innerText = caption;
+document.getElementById(
+"output"
+).innerText = content;
 
-document.getElementById("adcopy").innerText = ad;
+document.getElementById(
+"result"
+).style.display = "block";
+}
 
-document.getElementById("hashtags").innerText = hashtags;
+function copyContent(){
+
+let text =
+document.getElementById(
+"output"
+).innerText;
+
+navigator.clipboard.writeText(
+text
+);
+
+alert("Content Copied!");
+}
+function downloadContent() {
+
+let text =
+document.getElementById("output").innerText;
+
+if(text === ""){
+alert("Generate content first!");
+return;
+}
+
+let blob =
+new Blob([text], {type: "text/plain"});
+
+let link =
+document.createElement("a");
+
+link.href =
+URL.createObjectURL(blob);
+
+link.download =
+"marketing-content.txt";
+
+link.click();
 
 }
-function toggleMode(){
- document.body.classList.toggle("light");
+function toggleDarkMode(){
+document.body.classList.toggle("dark-mode");
 }
-let totalPosts = 0;
-
-function generateContent(){
- totalPosts++;
- document.getElementById("count").innerText = totalPosts;
-}
-document.getElementById("loading").style.display="block";
-
-setTimeout(()=>{
-document
